@@ -40,7 +40,7 @@ function createMap() {
 
 function queryRoutesNames() {
 	var query = "SELECT 'routeNameUnique', 'item' "+
-        "FROM 1XLUFQvXSMOAnUYvdaBVM7e13v_6fFF4IGc0m8olW "+
+        "FROM 1_niztg_UiZKywKxU0SWlJNtJlvFVSgYq8B2vtiA3 "+
 	"WHERE 'item' = '1'" +
         "GROUP BY 'routeNameUnique', 'item' "+
 	"ORDER BY 'routeNameUnique' ";
@@ -77,7 +77,7 @@ function queryRoute(routeName) {
         
 
         var query = "SELECT 'stopName', 'stopAddress', 'stopLatitude', 'stopLongitude', 'stopId', 'numberStop', 'item' "+
-        "FROM 1XLUFQvXSMOAnUYvdaBVM7e13v_6fFF4IGc0m8olW WHERE 'routeNameUnique' = '"+routeName+"' "+
+        "FROM 1_niztg_UiZKywKxU0SWlJNtJlvFVSgYq8B2vtiA3 WHERE 'routeNameUnique' = '"+routeName+"' "+
 	"AND 'item' = '1'" +
         "ORDER BY 'numberStop' ";
         query = encodeURIComponent(query);
@@ -112,7 +112,7 @@ function queryRoute(routeName) {
 function prepareInfoWindow(marker, name, address, stopID) {
 	var infoWindowContent = ""; //variable semi global
 	var query = "SELECT 'routeNameUnique', 'stopId'"+
-	"FROM 1XLUFQvXSMOAnUYvdaBVM7e13v_6fFF4IGc0m8olW WHERE 'stopId' = '"+stopID+"'";
+	"FROM 1_niztg_UiZKywKxU0SWlJNtJlvFVSgYq8B2vtiA3 WHERE 'stopId' = '"+stopID+"'";
 
 	query = encodeURIComponent(query);
 	var gvizQuery = new google.visualization.Query(
